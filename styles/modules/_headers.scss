@@ -1,0 +1,25 @@
+.main-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    &__title, h1{
+        @include flex-display(row);
+        gap: 8px;
+        font-family: $bold-font;
+        font-size: $headline4;
+        @media (max-width: $mobile-queries){
+            font-size: $mob-headline4;
+        }
+    }
+    &__support, p{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-family: $regular-font;
+        text-align: center; 
+        font-size: $caption; 
+    }
+}
