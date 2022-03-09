@@ -1,4 +1,16 @@
 //---------------Mixin Containers---------------
+// Primary Container
+
+@mixin primary-container {
+    padding: 16px;
+    gap: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $small-shade;
+    background-color: $white-color;
+}
+
 
 //Secondary Container Layout
 @mixin secondary-container {
@@ -27,8 +39,71 @@
     }
 }
 
+//Main card
+@mixin main-card ($background-color) {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid $secondary-color-gray-500;
+    background-color: $background-color;
+    padding: 16px;
+}
+//Interactive card - This card can be use to drag and drop, upload, or empty states with actions
+@mixin interactive-card {
+    border: 2px dashed $secondary-color-gray-500;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    a{
+        color: $secondary-color-gray-700;
+        font-family: $regular-font;
+        justify-content: center;
+    }
+}
 
 //---------------UI Containers---------------
+// Primary Container
+
+.container-resumen{
+    @include primary-container;
+    width: 100%;    
+    box-sizing: border-box;
+    &__header, p{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        font-family: $regular-font;
+        font-size: $text3;
+    }
+    &__content{
+        display: flex;
+        gap: 16px;
+        .icon-container{
+            @include flex-display(row);
+            color: $white-color;
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            border-radius: 8px;
+            background-color: $primary-color-yellow;
+        }
+        .resumen-values{
+            display: flex;
+            flex-direction: column;
+            &__main{
+                font-size: $text2;
+                font-family: $bold-font;
+            }
+            &__caption{
+                font-size: $caption;
+                font-family: $regular-font;
+                color: $secondary-color-gray-900;
+            }
+        }
+    }
+}
+
+
 // Secondary Container
 .container-secondary{
     @include secondary-container;
@@ -44,7 +119,10 @@
                 display: flex;
             } 
         }
-                     
+        h3{
+            font-family: $bold-font;
+            font-size: 18px;
+        }                     
     }
     &__info{
         @include flex-display(row);
@@ -88,6 +166,17 @@
                     @include circle-status($secondary-color-yellow-700)
                 }                  
             }
+            .positive-tag{
+                @include tag($secondary-color-green-500);
+            }
+            .negative-tag{
+                @include tag($secondary-color-orange-600)
+            }
+        }
+        .info-item-vertical{
+            @extend .info-item;
+            flex-direction: column;
+            align-items: start;
         }
         .id-desktop{
             @extend .info-item;
@@ -112,11 +201,51 @@
             }
         }
     }
+    //card split 2 sides - Mi account - Plans
+    &__split{
+        display: flex;
+        gap: 24px;
+        @media (max-width: $mobile-queries){
+            flex-direction: column;
+        }
+        .left-side{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+            .membership-item:first-child{
+                grid-column: 1/3;
+            }
+            p{
+                grid-column: 1/3;
+                margin: 0;
+                font-size: $text4;
+                font-family: $regular-font;
+            }
+        }
+        .right-side{
+            width: 100%;
+            @include flex-display(column);
+            gap: 16px;
+            &__resumen{
+                @include main-card($neutral-color-white);    
+            }
+            &__add-coupon{
+                font-size: $text4;
+                font-family: $regular-font;
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+
+    // Membership card
     .membership-card{
         @media (max-width: $mobile-queries){
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            // grid-template-rows: repeat(3, 1fr);
             grid-column-gap: 16px;
             grid-row-gap: 16px;
         }
@@ -128,11 +257,35 @@
             gap: 4px;
         }
     }
+
+    // Full-row
+    .full-row{
+        grid-column: 1/3;
+        display: flex;
+        gap: 4px;
+    }
+
+    //Separator
+    .separator{
+        height: 1px;
+        width: 100%;
+        background-color: $secondary-color-gray-500;
+    }
+
+    //Address container
+    .address-container{
+        @media (max-width: $mobile-queries){
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 // Secondary Container Resumen
 .container-secondary-resumen{
     @include secondary-container;
+    width: 100%;
+    box-sizing: border-box;
     &__header{
         @include secondary-container-header;      
     }
@@ -166,3 +319,55 @@
         }
     }
 }
+
+// Address card
+.saving-card{
+    @include main-card($neutral-color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    align-self: stretch;
+    gap: 16px;
+    &__info, p{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin: 0;
+        font-family: $regular-font;
+        p:first-child{
+            font-family: $bold-font;
+            font-size: $text3;
+        }
+        .payment-card-brand{
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__info-options, a{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        color: $color-black;
+        gap: 8px;
+    } 
+    .tag-action-main{
+        @include secondary-tag($secondary-color-gray-500);
+        a{
+            font-size: $caption;
+            font-family: $regular-font;
+            color: $color-black;
+        }
+    }
+    .tag-action{
+        @include secondary-tag-outline($secondary-color-gray-500);
+        @include flex-display(row);
+        width: 24px;
+        height: 24px;
+    }    
+}
+.saving-card:last-child{
+    @include interactive-card;
+}
+

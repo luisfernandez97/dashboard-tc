@@ -37,7 +37,17 @@ $neutral-color-gray: #F6F6F6;
 // Secondary
 $secondary-color-yellow-600: #FFF8E1;
 $secondary-color-yellow-700: #FFD255;
+$secondary-color-green-500: #D0E9ED;
+$secondary-color-orange-600: #FCE1DB;
 $secondary-color-gray-500: #EEEEEE;
+$secondary-color-gray-700: #A7A6A6;
+$secondary-color-gray-900: #6D6D6D;
+
+//Semantic
+$semantic-color-sucess: #01C809;
+$semantic-color-failure: #D1160A;
+$semantic-color-sucess-secondary: #E1FCEF;
+$semantic-color-failure-secondary: #FF9F99;
 
 // Display Flex
 @mixin flex-display($flex-direction) {
@@ -52,6 +62,7 @@ $mobile-queries: 1100px;
 
 // Font Size
 $headline4: 28px;
+$headline5: 22px;
 $text2: 18px;
 $text3: 16px;
 $text4: 14px;
@@ -84,6 +95,8 @@ body{
 }
 
 a{
+    @include flex-display(row);
+    gap: 8px;
     font-family: $bold-font;
     font-size: $text4;
     color: $primary-color-green;

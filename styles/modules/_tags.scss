@@ -18,4 +18,19 @@
     height: 8px;
     border-radius: 50%;
     background-color: $color-circle;
-}     
+} 
+
+// Secondary Tag
+@mixin secondary-tag($background-color) {
+    font-family: $regular-font;
+    font-size: $caption;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $background-color;
+}
+
+@mixin secondary-tag-outline($border-color){
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+}

@@ -1,0 +1,35 @@
+.danger-zone{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: $regular-font;
+    gap: 16px;
+    &__title{
+        font-family: $bold-font;
+        font-size: $headline4;
+        margin: 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $secondary-color-gray-500;
+        width: 100%;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        section, h3, p{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            h3{
+                font-size: $headline5;
+                font-family: $bold-font;
+            }
+        }
+        .btn-outline {
+            @include button-outline ($semantic-color-failure, $neutral-color-white);
+            width: 220px;
+        }
+    }
+}

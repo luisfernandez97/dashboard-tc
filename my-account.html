@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Mi cuenta</title>
+</head>
+<body>
+    <main class="dashboard-main">
+        <div class="main-header">
+            <div class="main-header__title">
+                <h1>Mi cuenta</h1>
+            </div>
+            <div class="main-header__exit">
+                <a href="#">Cerrar Sesión <box-icon name='exit' color="#1f9c94"></box-icon></a>                
+            </div>
+        </div>
+        <!-- Membership plan -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Su plan de alimentación</h2>
+                <a href="#">Editar</a>
+            </div>
+            <div class="container-secondary__split">
+                <!-- Plan details left side -->
+                <div class="container-secondary__info left-side">
+                    <div class="membership-item">
+                        <div class="membership-item__info">
+                            <p class="info-item__label">Cant. Personas:</p>
+                            <p class="info-item__content">6</p>
+                        </div>
+                    </div>
+                    
+                    <div class="membership-item">
+                        <div class="membership-item__info">
+                            <p class="info-item__label">Almuerzos:</p>
+                            <p class="info-item__content">6</p>
+                        </div>
+                        <p class="membership-item__price">$11.900 c/u</p>
+                    </div>
+    
+                    <div class="membership-item">
+                        <div class="membership-item__info">
+                            <p class="info-item__label">Cenas:</p>
+                            <p class="info-item__content">6</p>
+                        </div>
+                        <p class="membership-item__price">$12.900 c/u</p>
+                    </div>
+    
+                    <div class="membership-item">
+                        <div class="membership-item__info">
+                            <p class="info-item__label">Batidos:</p>
+                            <p class="info-item__content">2</p>
+                        </div>
+                        <p class="membership-item__price">$2.100 c/u</p>
+                    </div>
+    
+                    <div class="membership-item">
+                        <div class="membership-item__info">
+                            <p class="info-item__label">Snacks:</p>
+                            <p class="info-item__content">No incluye</p>
+                        </div>
+                        <p class="membership-item__price">No incluye</p>
+                    </div>
+                    <p>El valor final a facturar podría variar de acuerdo si su plan cuenta con opciones de menú premium.</p>
+                </div>
+                <!-- Plan Resumen -->
+                <div class="right-side">
+                    <div class="right-side__resumen">
+                        <div class="container-secondary-resumen__list-items">
+                            <div class="resumen-item">
+                                <p>Subtotal</p>
+                                <p>$128.500</p>
+                            </div>
+                            <div class="resumen-item">
+                                <p>Platos Premium</p>
+                                <p>$7.500</p>
+                            </div>
+                            <div class="resumen-item">
+                                <p>Domicilio</p>
+                                <p>GRATIS</p>
+                            </div>
+                            <div class="resumen-item-discount">
+                                <p>Descuentos (${couponName})</p>
+                                <p>$20.000</p>
+                            </div>
+                            <div class="resumen-item">
+                                <p>Total</p>
+                                <p>$138.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-side__add-coupon">
+                        <p>¿Tienes un cupón?</p>
+                        <a href="#">Aplicar cupón</a>
+                    </div>                    
+
+                </div>
+            </div>
+        </div>
+        <!-- Preferences -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Tus gustos</h2>
+                <a href="#">Editar</a>
+            </div>
+            <div class="container-secondary__info">
+                <div class="full-row">
+                    <p class="info-item__label">Comida favorita:</p>
+                    <p class="info-item__content">Mancarrones con queso</p>
+                </div>
+            </div>
+            <div class="container-secondary__info">
+                <!-- Favorite protein -->
+                <div class="info-item-vertical">
+                    <p class="info-item__label">Proteínas:</p>
+                    <div class="membership-item__info">
+                        <p class="positive-tag">Pollo</p>
+                        <p class="positive-tag">Pollo</p>
+                        <p class="positive-tag">Pollo</p>
+                    </div>
+                </div>
+                <!-- Avoid items -->
+                <div class="info-item-vertical">
+                    <p class="info-item__label">Evitar:</p>
+                    <div class="membership-item__info">
+                        <p class="negative-tag">Soya</p>
+                        <p class="negative-tag">Lácteos</p>
+                        <p class="negative-tag">Mariscos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Delivery info-->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Información de entrega</h2>
+                <a href="#">Añadir dirección</a>
+            </div>
+            <div class="container-secondary__info">
+                <div class="info-item">
+                    <p class="info-item__label">Día de entrega del plan:</p>
+                    <p class="info-item__content">Martes</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-item__label">Horario de entrega:</p>
+                    <p class="info-item__content">9:00 AM - 12:00 PM</p>
+                </div>
+                
+                <div class="info-item">
+                    <p class="info-item__label">Primer día de entrega:</p>
+                    <p class="info-item__content">Martes 22 enero</p>
+                </div>
+            </div>  
+            <div class="separator"></div> 
+            <!-- Addresses -->
+            <div class="container-secondary__header">
+                <h3>Direcciones</h3>
+            </div>
+            <div class="container-secondary__info address-container">
+                <!-- Main Address -->
+                <div class="saving-card">
+                    <div class="saving-card__info">
+                        <p>Address name</p>
+                        <p>Av. 19 # 116-15</p>
+                        <p>Apto 3</p>
+                        <p>Bogotá</p>
+                        <div class="saving-card__info-options">
+                            <a href="#">Editar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="tag-action-main">
+                        <a href="#">Principal</a> 
+                    </div>
+                </div>
+                <!-- Address saved -->
+                <div class="saving-card">
+                    <div class="saving-card__info">
+                        <p>Address name</p>
+                        <p>Av. 19 # 116-15</p>
+                        <p>Apto 3</p>
+                        <p>Bogotá</p>
+                        <div class="saving-card__info-options">
+                            <a href="#">Editar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="tag-action">
+                        <a href="#"><box-icon color="#6d6d6d" name='star' ></box-icon></a>
+                    </div>
+                </div>
+                <!-- Add new empty state -->
+                <div class="saving-card">
+                    <a href="#">
+                        <box-icon color="#a7a6a6" name='plus' ></box-icon>
+                        Añadir nueva dirección
+                    </a>
+                </div>
+            </div>         
+        </div>
+        <!-- Payments info -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Métodos de pagos</h2>
+                <a href="#">Añadir tarjeta</a>
+            </div>
+            <div class="container-secondary__info address-container">
+                <!-- Main card payment -->
+                <div class="saving-card">
+                    <div class="saving-card__info">
+                        <p>TitularName</p>
+                        <div class="payment-card-brand"><box-icon name='credit-card-alt' ></box-icon>Visa terminada en 5400</div>
+                        <div class="saving-card__info-options">
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="tag-action-main">
+                        <a href="#">Principal</a> 
+                    </div>
+                </div>
+                <!-- Payment saved -->
+                <div class="saving-card">
+                    <div class="saving-card__info">
+                        <p>TitularName</p>
+                        <div class="payment-card-brand"><box-icon name='credit-card-alt' ></box-icon>Visa terminada en 5400</div>
+                        <div class="saving-card__info-options">
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="tag-action">
+                        <a href="#"><box-icon color="#6d6d6d" name='star' ></box-icon></a>
+                    </div>
+                </div>
+                <!-- Add new empty state -->
+                <div class="saving-card">
+                    <a href="#">
+                        <box-icon color="#a7a6a6" name='plus' ></box-icon>
+                        Añadir nueva tarjeta
+                    </a>
+                </div>
+            </div>   
+        </div>
+        <!-- Danger Zone -->
+        <div class="danger-zone">
+            <h2 class="danger-zone__title">Zona de peligro</h2>
+            <div class="danger-zone__content">
+                <section>
+                    <h3>Cancelar membresía</h3>
+                    <p>Si deseas pausar tu cuenta para pausar la recepción de nuevos pedidos, haga clic en cancelar cuenta.</p>
+                </section>
+                <input class="btn-outline" type="button" value="Cancelar cuenta">
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+</body>
+</html>

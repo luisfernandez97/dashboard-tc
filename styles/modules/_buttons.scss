@@ -1,0 +1,19 @@
+//-------------Mixing Buttons-------------
+
+//Outline buttons
+@mixin button-outline ($border-color, $background-color) {
+    border-radius: 160px;
+    padding: 10px 34px;
+    border: 1px solid $border-color;
+    background-color: $background-color;
+    font-size: $text3;
+    color: $border-color;
+    font-family: $bold-font;
+    &:hover{
+        cursor: pointer;
+    }    
+}
+
+//-------------UI Buttons-------------
+
+//Buttons

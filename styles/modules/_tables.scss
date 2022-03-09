@@ -1,0 +1,84 @@
+.table-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;    
+}
+.table-card{
+    @include primary-container;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: $regular-font;
+    &__main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        gap: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $secondary-color-gray-500;
+        .info-item{
+            @include flex-display(column);
+            align-items: start;
+            gap: 4px;
+            justify-content: start;
+            &__label{
+                font-size: $text3;
+                margin: 0;
+                @media (max-width: $mobile-queries){
+                    font-size: $mob-text3;
+                } 
+            }
+            &__content{
+                font-size: $mob-text3;
+                margin: 0;
+                display: flex;
+                gap: 4px;
+            }
+            .item__tag{
+                @include tag($secondary-color-yellow-600);
+                .circle{
+                    @include circle-status($secondary-color-yellow-700)
+                }                  
+            }
+            .positive-tag{
+                @include tag($secondary-color-green-500);
+            }
+            .negative-tag{
+                @include tag($secondary-color-orange-600)
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: start;        
+        .info-item{
+            font-family: $regular-font;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 1fr 1fr auto;
+            grid-column-gap: 16px;
+            grid-row-gap: 8px;
+            &__label{
+                grid-column: 1/3;
+                margin: 0;
+                font-size: $mob-caption;
+            }
+            &__content, p{
+                display: flex;
+                gap: 4px;
+                font-size: $mob-text3;
+                margin: 0;
+            }
+        }
+        
+    }
+    &__id, p{
+        display: flex;
+        font-size: $mob-caption;
+        gap: 4px;
+        margin: 0;
+    }
+}
