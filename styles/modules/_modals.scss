@@ -1,0 +1,164 @@
+@mixin standarModals ($shadeSize: $small-shade) {
+    background-color: $white-color;
+    border-radius: 16px;
+    box-shadow: $shadeSize;
+    padding: 24px;
+}
+
+// ------------Modal Caution for Dashboard to new order------------
+.modal-caution{
+    @include standarModals($large-shade);
+    @include flex-display(column);
+    text-align: center;
+    font-family: $regular-font;
+    font-size: $text4;
+    gap: 8px;
+    width: 392px;
+    @media (max-width: $mobile-queries){
+        width: 90%;
+        padding: 16px;
+    }
+    &__icon{
+        width: 120px;
+        height: auto;
+        @media (max-width: $mobile-queries){
+            img{
+                width: 80px;
+            }
+        }
+    }
+    &__content, p{
+        margin: 0; 
+        gap: 8px;       
+        &-title{
+            font-family: $bold-font;
+            font-size: $headline6;
+        }
+    }
+
+
+}
+
+//------------Modal-preferences------------
+.modal-preferences{
+    @include standarModals;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-family: $regular-font;
+    padding: 0;
+    &__header{
+        display: flex;
+        gap: 16px;
+        text-align: start;
+        justify-content: space-between;
+        padding: 24px;
+        border-bottom: 1px solid $secondary-color-gray-500;
+        .title{
+            margin: 0;
+            font-size: $headline4;
+            font-family: $bold-font;
+        }
+    }
+    &__content{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .preference-input{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 4px;
+            select{
+                @include dropdown-main;
+            }            
+        }
+        .preferences-options{
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+            @media (max-width: $mobile-queries){
+                flex-direction: column;
+            }
+            &__container{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                .main-section, p{
+                    gap: 4px;
+                    margin: 0;
+                    font-size: $text4;
+                    margin: 0;
+                    &__title{
+                        margin: 0;
+                        font-family: $bold-font;
+                        font-size: $text3;
+                    }
+                }
+                .options-section > button{
+                    @include secondary-tag($secondary-color-gray-500);
+                    padding: 4px;
+                    border: none;
+                }
+            }
+        }
+        .box-info{
+            @include box-info;
+        }
+    }
+    &__actions{
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $secondary-color-gray-500;
+        .btn-outline{
+            @include button-outline ($primary-color-green, $white-color);
+        }
+        .btn-filled{
+            @include button-filled ($primary-color-green, $white-color);
+        }
+    }
+}
+
+//------------Modal-Information Small------------
+.modal-info{
+    @include standarModals;
+    padding: 16px;
+    font-family: $regular-font;
+    font-size: $text4;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    justify-content: space-between;
+    width: 362px;
+    height: auto;
+    gap: 8px;
+    @media (max-width: $mobile-queries){
+        width: 90%;
+    }
+    p{
+        margin: 0;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
+    &__actions{
+        display: flex;
+        width: 100%;
+        gap: 32px;
+        align-items: center;
+        justify-content: end;
+        .btn-filled{
+            @include button-filled ($primary-color-green, $white-color);
+        }
+        a{
+            color: $secondary-color-gray-900;
+        }
+    }
+}
+

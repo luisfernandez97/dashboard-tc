@@ -10,7 +10,7 @@
     box-shadow: $small-shade;
     background-color: $white-color;
 }
-
+ 
 
 //Secondary Container Layout
 @mixin secondary-container {
@@ -58,6 +58,26 @@
         color: $secondary-color-gray-700;
         font-family: $regular-font;
         justify-content: center;
+    }
+}
+
+//Box info Container
+@mixin box-info {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: $secondary-color-yellow-600;
+    border-radius: 8px;
+    font-size: $text4;
+    font-family: $regular-font;
+    text-align: start;
+    align-items: center;
+    p{
+        margin: 0;
+        width: 100%
+    }
+    b{
+        font-family: $bold-font;
     }
 }
 

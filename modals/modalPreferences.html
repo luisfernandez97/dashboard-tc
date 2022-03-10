@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="dashboard-main">
+        <div class="modal-preferences">
+            <!-- Title section -->
+            <div class="modal-preferences__header">
+                <p class="title">Tus gustos</p>
+                <a href="#"><box-icon color="#0F0F0F" name='x'></box-icon></a>                
+            </div>
+            <!-- Content section -->
+            <div class="modal-preferences__content">
+                <div class="preference-input">
+                    <label for="">Comida Favorita</label>
+                    <input type="text" placeholder="Ej. Mancarrones con queso" name="" id="">
+                </div>
+                <div class="preferences-options">
+                    <!-- Favorites -->
+                    <div class="preferences-options__container">
+                        <div class="main-section">
+                            <p class="main-section__title">Productos favoritos</p>
+                            <p>Selecciona los productos de tu preferencia.</p>
+                        </div>
+                        <!-- Options -->
+                        <div class="options-section">
+                            <button>Pollo</button>
+                        </div>
+                    </div>
+                    <!-- To avoid -->
+                    <div class="preferences-options__container">
+                        <div class="main-section">
+                            <p class="main-section__title">Productos a evitar</p>
+                            <p>Selecciona los productos que deseas evitar.</p>
+                        </div>
+                        <!-- Options -->
+                        <div class="options-section">
+                            <button>Soya</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box information -->
+                <div class="box-info">
+                    <box-icon color="#EFA808" name='bulb'></box-icon>
+                    <p>Con ésta información podrás recibir mejores recomendaciones basados en tus gustos.</p>                    
+                </div>
+            </div>
+            <!-- Action section -->
+            <div class="modal-preferences__actions">
+                <input class="btn-outline" type="button" value="Cancelar">
+                <input class="btn-filled" type="button" value="Aceptar">
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</body>
+</html>

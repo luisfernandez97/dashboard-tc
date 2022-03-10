@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="dashboard-main">
+        <div class="modal-preferences">
+            <!-- Title section -->
+            <div class="modal-preferences__header">
+                <p class="title">Información de entrega</p>
+                <a href="#"><box-icon color="#0F0F0F" name='x'></box-icon></a>                
+            </div>
+            <!-- Content section -->
+            <div class="modal-preferences__content">
+                <div class="preferences-options">
+                    <!-- Days -->
+                    <div class="preference-input">
+                        <label for="">Día para recibir sus pedidos</label>
+                        <form action="#">
+                            <select class="dropdown" name="delivery-day" id="delivery-day">
+                              <option class="item-dropdown" value="empty">
+                                  <div><box-icon name='calendar-alt' ></box-icon>Seleccione día</div>
+                              </option>
+                              <option class="item-dropdown" value="martes">Martes</option>
+                              <option class="item-dropdown" value="miercoles">Miércoles</option>
+                              <option class="item-dropdown" value="jueves">Jueves</option>
+                              <option class="item-dropdown" value="viernes">Viernes</option>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- Hours -->
+                    <div class="preference-input">
+                        <label for="">Horario de entrega</label>
+                        <form action="#">
+                            <select class="dropdown" name="delivery-time" id="delivery-time">
+                              <option class="item-dropdown" value="empty">
+                                  <div><box-icon name='time-five' ></box-icon>Seleccione horario</div>
+                              </option>
+                              <option class="item-dropdown" value="martes">10:00 AM - 12:00 PM</option>
+                              <option class="item-dropdown" value="miercoles">12:00 PM - 02:00 PM</option>
+                              <option class="item-dropdown" value="jueves">02:00 PM - 04:00 PM</option>
+                              <option class="item-dropdown" value="viernes">04:00 PM - 06:00 PM</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <!-- Box information -->
+                <div class="box-info">
+                    <box-icon color="#EFA808" name='bulb'></box-icon>
+                    <p><b>Seleccione el día y la hora</b> en la que estarás recibiendo los pedidos de tu plan semanal de alimentación. </p>                    
+                </div>
+            </div>
+            <!-- Action section -->
+            <div class="modal-preferences__actions">
+                <input class="btn-outline" type="button" value="Cancelar">
+                <input class="btn-filled" type="button" value="Aceptar">
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</body>
+</html>

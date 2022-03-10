@@ -1,0 +1,17 @@
+@mixin dropdown-main {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    padding: 12px 8px;
+    border-radius: 8px;
+    border: 1px solid $color-black;
+    background-color: $white-color;
+    font-family: $regular-font;
+    font-size: $text3;
+}
+
+@mixin dropdown-item {
+    padding: 16px;
+}
