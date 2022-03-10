@@ -1,0 +1,9 @@
+@mixin standard-input {
+    input[type=text]{
+        padding: 12px 8px;
+        border-radius: 8px;
+        &::placeholder{
+            color: $secondary-color-gray-700;
+        }
+    }    
+}

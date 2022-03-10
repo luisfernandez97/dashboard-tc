@@ -71,6 +71,7 @@
             flex-direction: column;
             width: 100%;
             gap: 4px;
+            @include standard-input;
             select{
                 @include dropdown-main;
             }            
@@ -98,10 +99,18 @@
                         font-size: $text3;
                     }
                 }
-                .options-section > button{
-                    @include secondary-tag($secondary-color-gray-500);
-                    padding: 4px;
-                    border: none;
+                .options-section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    &__checkbox-positive{
+                        display: flex;
+                        @include button-checkbox($semantic-color-sucess-secondary, $primary-color-green);
+                    }
+                    &__checkbox-negative{
+                        display: flex;
+                        @include button-checkbox($semantic-color-failure-secondary, $semantic-color-failure);
+                    }
                 }
             }
         }

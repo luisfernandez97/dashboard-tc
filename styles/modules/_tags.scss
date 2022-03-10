@@ -21,16 +21,55 @@
 } 
 
 // Secondary Tag
-@mixin secondary-tag($background-color) {
+@mixin secondary-tag($background-color, $text-color: $color-black) {
     font-family: $regular-font;
     font-size: $caption;
     padding: 10px;
     border-radius: 8px;
     background-color: $background-color;
+    color: $text-color;
 }
 
-@mixin secondary-tag-outline($border-color){
+@mixin secondary-tag-outline($border-color, $text-color: $color-black){
     padding: 6px;
     border-radius: 8px;
     border: 1px solid $border-color;
+    color: $text-color;
+}
+
+
+// ---------------------- Checkbox type buttons with selection ----------------------
+// -------------- HTML Structure --------------
+// <input type="checkbox" class="checkbox-button" name="pollo" id="pollo">
+// <label for="pollo">Pollo<img class="icon-checked" src="../Assets/check.svg" alt="checked"></label>
+@mixin button-checkbox ($background-color: $semantic-color-sucess-secondary, $background-icon: $primary-color-green) {
+    .icon-checked{
+        display: none;
+    }
+    input[type=checkbox]+label {
+        display: flex;
+        gap: 4px;
+        @include secondary-tag($secondary-color-gray-500, $color-black);
+        padding: 4px;
+        cursor: pointer;
+    }
+    .checkbox-button{
+        display: none;
+    }
+    input[type=checkbox]:checked+label {
+        @include secondary-tag($background-color, $color-black);
+        padding: 4px;
+        .icon-checked{
+            display: block;
+            padding: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $background-icon;
+            color: $white-color;
+            position: relative;
+            top: -6px;
+            right: -6px;
+        }
+    }    
 }
