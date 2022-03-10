@@ -1164,6 +1164,7 @@ a {
   gap: 0;
   font-family: "Goldplay-Regular";
   padding: 0;
+  margin: 0;
 }
 .modal-preferences__header {
   display: -webkit-box;
