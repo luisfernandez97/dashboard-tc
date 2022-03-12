@@ -5,11 +5,13 @@
     align-items: center;
     margin-bottom: 32px;
     &__title, h1{
-        @include flex-display(row);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 8px;
         font-family: $bold-font;
         font-size: $headline4;
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             font-size: $mob-headline4;
         }
     }

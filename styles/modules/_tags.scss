@@ -8,7 +8,7 @@
     padding: 4px;
     border-radius: 8px;
     background-color: $color-tag;
-    @media (max-width: $mobile-queries){
+    @media (max-width: $width-m){
         font-size: $mob-caption;
     }
 }
@@ -42,7 +42,7 @@
 // -------------- HTML Structure --------------
 // <input type="checkbox" class="checkbox-button" name="pollo" id="pollo">
 // <label for="pollo">Pollo<img class="icon-checked" src="../Assets/check.svg" alt="checked"></label>
-@mixin button-checkbox ($background-color: $semantic-color-sucess-secondary, $background-icon: $primary-color-green) {
+@mixin button-checkbox ($background-color: $semantic-color-sucess-secondary, $background-icon: $principal) {
     .icon-checked{
         display: none;
     }

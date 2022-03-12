@@ -1,0 +1,190 @@
+// colores
+//Primary
+$principal: #209c93;
+$principal-darker: #17706a;
+$principal-lighter: #2ac0b6;
+$principal-light-bg: #e1f1f1;
+$secundario: #f39f64;
+$secundario-darker: #f18334;
+$amarillo: #fdd225;
+$rojo: #ff6d73;
+$verde: #45e38c;
+$morado: #622edb;
+
+//-------------Primary Added----------
+$primary-color-orange: #E65F36;
+$primary-color-yellow: #FCC23F;
+$primary-color-gray: #828282;
+
+//Neutral
+$color1: #fff;
+$color2: #000;
+$color3: #404040;
+$color4: #1a1a1a;
+$text-color: #1e105c;
+$gris: #a5a5a5;
+$beige: #faf9f4;
+$light-background: #f9f9f9;
+$white-background: #ffffff;
+$blue-background: #f8f9fb;
+$light-gray: #c2c3c7;
+
+//-----------Neutral added--------------
+$white-color: #fff;
+$color-black: #0F0F0F;
+$neutral-color-white: #fbfbfb;
+$neutral-color-gray: #F6F6F6;
+
+
+//---------Secondary Colors--------------
+$secondary-color-yellow-600: #FFF8E1;
+$secondary-color-yellow-700: #FFD255;
+$secondary-color-green-500: #D0E9ED;
+$secondary-color-orange-600: #FCE1DB;
+$secondary-color-gray-500: #EEEEEE;
+$secondary-color-gray-700: #A7A6A6;
+$secondary-color-gray-800: #828282;
+$secondary-color-gray-900: #6D6D6D;
+
+//---------Semantic Colors---------------
+$semantic-color-sucess: #01C809;
+$semantic-color-failure: #D1160A;
+$semantic-color-sucess-secondary: #E1FCEF;
+$semantic-color-failure-secondary: #FF9F99;
+
+// Order Status Clors
+$waiting-restaurant: #329acf;
+$waiting-payment: #ffdf5f;
+$preparing-order: #9bfb9a;
+$order-cancelled: #cc0001;
+$order-success: #00f303;
+
+// Nuevo verde
+$new-verde: linear-gradient(to right, #02ad77 0%, #308a83 100%);
+$naranja-gradient: linear-gradient(to right, #f6b68a 0%, #fad263 100%);
+$cashback-gradient: linear-gradient(to right, #fff5a9 0%, #fce855 100%);
+$premium-gradient: linear-gradient(to right, #ffea4f 0%, #c5b00f 100%);
+
+$new-yellow: #fad263;
+$new-verde-only: #189b7d;
+$new-morado: #1f4879;
+$new-naranja: #f6b68a;
+// Nuevo gris
+$new-gray: #9b998b;
+$cashback: #faec86;
+
+// breackpoints
+$width-xs: 350px;
+$width-s: 640px;
+$width-m: 992px;
+$width-l: 1024px;
+$width-xl: 1440px;
+$gradient1: linear-gradient(
+	to right,
+	rgba(2, 173, 119, 1) 0%,
+	rgba(48, 138, 131, 1) 100%
+);
+
+// fuentes
+$font1: 'Avenir', sans-serif;
+
+// sombra
+$sombra1: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 5px 0 rgba(0, 0, 0, 0.05),
+	0 2px 1px -2px rgba(0, 0, 0, 0.2);
+$sombra2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+// New colors
+$degraded-green: linear-gradient(262deg, #00af78, #328a85);
+$degraded-purple: linear-gradient(262deg, #986df8, #622edb);
+$green: #259280;
+$green-hover: #37d0b7;
+$verde-secundario: #259280;
+
+// Cards
+$card-background: #f8f8f7;
+$card-background-dark: #ebebeb;
+
+$dark-overlay: rgba(0, 0, 0, 0.397);
+$light-overlay: rgba(
+	$color: #ffffff,
+	$alpha: 0.6,
+);
+$white-gradient-to-left: linear-gradient(
+	90deg,
+	rgb(255, 255, 255) 0%,
+	rgba(255, 255, 255, 0.6082808123249299) 50%,
+	rgba(255, 255, 255, 0.014) 100%
+);
+$white-gradient-to-right: linear-gradient(
+  180deg,
+  rgb(255, 255, 255) 0%,
+	rgba(255, 255, 255, 0.6082808123249299) 50%,
+	rgba(255, 255, 255, 0.014) 100%
+);
+
+$subtitle-gray: rgb(116, 116, 116);
+
+// Subscriptions
+$warning-color: #ff9966;
+$warning-color-light-1: mix($warning-color, $color1, 90%);
+$warning-color-light-2: mix($warning-color, $color1, 80%);
+$warning-color-light-3: mix($warning-color, $color1, 70%);
+$warning-color-light-4: mix($warning-color, $color1, 60%);
+$warning-color-light-5: mix($warning-color, $color1, 50%);
+$warning-color-light-6: mix($warning-color, $color1, 40%);
+$warning-color-light-7: mix($warning-color, $color1, 30%);
+$warning-color-light-8: mix($warning-color, $color1, 20%);
+$warning-color-light-9: mix($warning-color, $color1, 10%);
+
+$warning-color-dark-1: mix($warning-color, $color2, 90%);
+$warning-color-dark-2: mix($warning-color, $color2, 80%);
+$warning-color-dark-3: mix($warning-color, $color2, 70%);
+$warning-color-dark-4: mix($warning-color, $color2, 60%);
+$warning-color-dark-5: mix($warning-color, $color2, 50%);
+$warning-color-dark-6: mix($warning-color, $color2, 40%);
+$warning-color-dark-7: mix($warning-color, $color2, 30%);
+$warning-color-dark-8: mix($warning-color, $color2, 20%);
+$warning-color-dark-9: mix($warning-color, $color2, 10%);
+
+//-----------------Shades Added------------------
+$small-shade: 0 6px 20px 0 rgba(0, 0, 0, 0.05), 0 -2px 10px 0 rgba(0, 0, 0, 0.05);
+$medium-shade: 0px 6px 20px rgba(0, 0, 0, 0.1);
+$large-shade: 0px 6px 20px rgba(0, 0, 0, 0.2);
+
+
+//---------------Fonts Added-------------------
+//------------- Fonts files--------------------
+@font-face {
+    font-family: 'Goldplay-Bold';
+    src: url("./fonts/Goldplay-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Goldplay-Regular';
+    src: url("./fonts/Goldplay-Regular.ttf");
+}
+@font-face {
+    font-family: 'Goldplay-SemiBold';
+    src: url("./fonts/Goldplay-SemiBold.ttf");
+}
+//---------------Fonts Family------------------
+$bold-font: 'Goldplay-Bold';
+$regular-font: 'Goldplay-Regular';
+$semibold-font: 'Goldplay-SemiBold';
+
+//------------ Font Size Desktop --------------
+$headline4: 28px;
+$headline5: 22px;
+$headline6: 18px;
+$text1: 20px;
+$text2: 18px;
+$text3: 16px;
+$text4: 14px;
+$caption: 12px;
+
+
+//---------------Font size Mobile (mob)--------
+$mob-headline4: $headline4 - 2px;
+$mob-text2: $text2 - 2px;
+$mob-text3: $text3 - 2px;
+$mob-text4: $text4 - 2px;
+$mob-caption: $caption - 1px;

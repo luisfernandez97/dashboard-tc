@@ -22,18 +22,25 @@
     background-color: $neutral-color-gray;
     border: 1px solid $secondary-color-gray-500;
     margin-bottom: 24px;
-    @media (max-width: $mobile-queries){
+    @media (max-width: $width-m){
         padding: 16px;
         margin-bottom: 8px;
     }
 }
+
+//Ternary Container
+@mixin ternary-container($background-color: $secondary-color-yellow-600) {
+    background-color: $background-color;
+    padding: 24px;
+}
+
 //Secondary Container Header
 @mixin secondary-container-header {
     h2{
         font-family: $bold-font;
         font-size: 18px;
         margin: 0;
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             font-size: 16px;
         }
     }
@@ -99,7 +106,9 @@
         display: flex;
         gap: 16px;
         .icon-container{
-            @include flex-display(row);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: $white-color;
             width: 32px;
             height: 32px;
@@ -128,12 +137,13 @@
 .container-secondary{
     @include secondary-container;
     &__header{
-        @include flex-display(row);
         @include secondary-container-header;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         .id-mobile{
             display: none;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 font-family: $regular-font;
                 font-size: $mob-caption;
                 display: flex;
@@ -145,22 +155,24 @@
         }                     
     }
     &__info{
-        @include flex-display(row);
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         align-items: start;
         gap: 24px;
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 16px;
             grid-row-gap: 16px;
         }
         .info-item{
-            @include flex-display(row);
+            display: flex;
+            align-items: center;
             gap: 4px;
             width: 100%;
             justify-content: start;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 flex-direction: column;
                 align-items: start;
             } 
@@ -168,7 +180,7 @@
                 font-family: $regular-font;
                 font-size: $text3;
                 margin: 0;
-                @media (max-width: $mobile-queries){
+                @media (max-width: $width-m){
                     font-size: $mob-text3;
                 } 
             }
@@ -176,7 +188,7 @@
                 font-family: $bold-font;
                 font-size: 16px;
                 margin: 0;
-                @media (max-width: $mobile-queries){
+                @media (max-width: $width-m){
                     font-size: $mob-text3;                    
                 } 
             }
@@ -200,12 +212,14 @@
         }
         .id-desktop{
             @extend .info-item;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 display: none;
             } 
         }
         .membership-item{
-            @include flex-display(column);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             align-items: start;
             gap: 0;
             .info-item{
@@ -225,7 +239,7 @@
     &__split{
         display: flex;
         gap: 24px;
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             flex-direction: column;
         }
         .left-side{
@@ -246,8 +260,11 @@
             }
         }
         .right-side{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 100%;
-            @include flex-display(column);
             gap: 16px;
             &__resumen{
                 @include main-card($neutral-color-white);    
@@ -263,7 +280,7 @@
 
     // Membership card
     .membership-card{
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 16px;
@@ -273,7 +290,9 @@
     .membership-item {
         width: 100%;
         &__info{
-            @include flex-display(row);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 4px;
         }
     }
@@ -294,7 +313,7 @@
 
     //Address container
     .address-container{
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             display: flex;
             flex-direction: column;
         }
@@ -319,7 +338,7 @@
             font-family: $regular-font;
             font-size: $text3;
             margin: 0;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 font-size: $mob-text3;
             }        
         }    
@@ -333,7 +352,7 @@
             font-size: $text2;
             font-family: $bold-font;
             margin: 0;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 font-size: $mob-text2;
             }
         }
@@ -382,7 +401,9 @@
     }
     .tag-action{
         @include secondary-tag-outline($secondary-color-gray-500);
-        @include flex-display(row);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 24px;
         height: 24px;
     }    

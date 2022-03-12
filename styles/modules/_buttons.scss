@@ -27,6 +27,18 @@
     } 
 }
 
+@mixin button-outline-icon ($border-color: $secondary-color-gray-500, $background-color: $white-color) {
+    border-radius: 160px;
+    padding: 12px 8px;
+    border: 1px solid $border-color;
+    background-color: $background-color;
+    font-size: $caption;
+    color: $color-black;
+    font-family: $bold-font;
+    &:hover{
+    cursor: pointer;
+    }   
+}
 //-------------UI Buttons-------------
 
 //Buttons

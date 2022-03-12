@@ -8,20 +8,23 @@
 // ------------Modal Caution for Dashboard to new order------------
 .modal-caution{
     @include standarModals($large-shade);
-    @include flex-display(column);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     font-family: $regular-font;
     font-size: $text4;
     gap: 8px;
     width: 392px;
-    @media (max-width: $mobile-queries){
+    @media (max-width: $width-m){
         width: 90%;
         padding: 16px;
     }
     &__icon{
         width: 120px;
         height: auto;
-        @media (max-width: $mobile-queries){
+        @media (max-width: $width-m){
             img{
                 width: 80px;
             }
@@ -80,7 +83,7 @@
             display: flex;
             gap: 24px;
             justify-content: space-between;
-            @media (max-width: $mobile-queries){
+            @media (max-width: $width-m){
                 flex-direction: column;
             }
             &__container{
@@ -105,7 +108,7 @@
                     gap: 8px;
                     &__checkbox-positive{
                         display: flex;
-                        @include button-checkbox($semantic-color-sucess-secondary, $primary-color-green);
+                        @include button-checkbox($semantic-color-sucess-secondary, $principal);
                     }
                     &__checkbox-negative{
                         display: flex;
@@ -124,10 +127,10 @@
         justify-content: space-between;
         border-top: 1px solid $secondary-color-gray-500;
         .btn-outline{
-            @include button-outline ($primary-color-green, $white-color);
+            @include button-outline ($principal, $white-color);
         }
         .btn-filled{
-            @include button-filled ($primary-color-green, $white-color);
+            @include button-filled ($principal, $white-color);
         }
     }
 }
@@ -148,7 +151,7 @@
     width: 362px;
     height: auto;
     gap: 8px;
-    @media (max-width: $mobile-queries){
+    @media (max-width: $width-m){
         width: 90%;
     }
     p{
@@ -166,7 +169,7 @@
         align-items: center;
         justify-content: end;
         .btn-filled{
-            @include button-filled ($primary-color-green, $white-color);
+            @include button-filled ($principal, $white-color);
         }
         a{
             color: $secondary-color-gray-900;

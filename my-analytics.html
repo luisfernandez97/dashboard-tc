@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="dashboard-main">
+        <div class="main-header">
+            <div class="main-header__title">
+                <h1>Mi Métricas</h1>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- Resumen card -->
+            <div class="resumen-container">
+                <!-- Graphic container -->
+                <div class="resumen-container__analytics">
+
+                </div>
+                <!-- Info container -->
+                <div class="resumen-container__info">
+                    <div class="title">
+                        <p class="title__label">¡Mira tu resumen mensual!</p>
+                        <p>Veamos tu consumo calórico promedio. Let’s go!</p>
+                    </div>
+                    <div class="food-resumen">
+                        <ol>
+                            <li>
+                                <div class="food-resumen__item">
+                                    <p class="title">Almuerzos:</p>
+                                    <p class="content">250 kcal.</p>                        
+                                </div>
+                            </li>
+                            <li>
+                                <div class="food-resumen__item">
+                                    <p class="title">Cenas:</p>
+                                    <p class="content">250 kcal.</p>                        
+                                </div>
+                            </li>
+                            <li>
+                                <div class="food-resumen__item">
+                                    <p class="title">Batidos:</p>
+                                    <p class="content">250 kcal.</p>                        
+                                </div>
+                            </li>
+                            <li>
+                                <div class="food-resumen__item">
+                                    <p class="title">Snacks:</p>
+                                    <p class="content">250 kcal.</p>                        
+                                </div>
+                            </li>
+                        </ol>
+                        
+                    </div>
+                    <div class="protein-resumen">
+                        <div class="title">Las proteínas que más consumió fueron:</div>
+                        <div class="content">
+                            <ol>
+                                <li>Pollo</li>
+                                <li>Pescado</li>
+                                <li>Bovino</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="actions-resumen">
+                        <input class="btn-outline-icon" type="button" value="Comparte">
+                        <input class="btn-outline-icon" type="button" value="Tweet">
+                    </div>
+                </div>
+            </div>
+            <!-- Social impact card -->
+            <div class="social-resumen">
+                <div class="social-resumen__content left-side">
+                    <div class="title">
+                        <p class="label">¡Sigue impactando vidas!</p>
+                        <p>Hasta la fecha <b>has impactado a 0000 familias</b> aprox.</p>
+                    </div>
+                    <div class="analytics">
+                        <div class="analytics__item">
+                            <img src="./Assets/smile-icon.svg" alt="Carita sonriente">
+                            <h1>000</h1>
+                            <p>Personas impactadas</p>
+                        </div>
+                        <div class="analytics__item">
+                            <img src="./Assets/food-icon.svg" alt="Alimentos">
+                            <h1>000</h1>
+                            <p>Mercados entregados</p>
+                        </div>
+                    </div>
+                    <p>Hemos donado el 7% de tus compras a familias en situación vulnerable. </p>
+                </div>
+                <div class="social-resumen__image right-side">
+                    <img src="./Images/people-sitting.jpg" alt="Persona sentadas riendo">
+                </div>
+            </div>
+            <!-- Analytics kcal -->
+            <div class="resumen-kcal">
+                <div class="resumen-kcal__header">
+                    <h1>Tu consumo de calorías</h1>
+                        <form action="#">
+                            <select class="dropdown" name="days-order" id="days-order">
+                              <option class="item-dropdown" value="30days">Últimos 30 días</option>
+                              <option class="item-dropdown" value="60days">Últimos 60 días</option>
+                              <option class="item-dropdown" value="90days">Últimos 90 días</option>
+                            </select>
+                        </form>
+                </div>
+                <div class="resumen-kcal__content">
+                    <div class="analytics"></div>
+                    <div class="legend"></div>
+                </div>
+                <div class="resumen-kcal__footer">
+                    <p>*Información obtenida a partir de su consumo de pedidos en TodosComemos.com esto no constituye en un consejo o asesoría nutricional, solo con fin informacional.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+</body>
+</html>

@@ -18,14 +18,15 @@
         padding-bottom: 8px;
         border-bottom: 1px solid $secondary-color-gray-500;
         .info-item{
-            @include flex-display(column);
+            display: flex;
+            flex-direction: column;
             align-items: start;
-            gap: 4px;
             justify-content: start;
+            gap: 4px;
             &__label{
                 font-size: $text3;
                 margin: 0;
-                @media (max-width: $mobile-queries){
+                @media (max-width: $width-m){
                     font-size: $mob-text3;
                 } 
             }
