@@ -101,6 +101,7 @@
             <div class="resumen-kcal">
                 <div class="resumen-kcal__header">
                     <h1>Tu consumo de calorías</h1>
+                    <a href="#"><box-icon class="icon" name='dots-vertical-rounded'></box-icon></a>
                         <form action="#">
                             <select class="dropdown" name="days-order" id="days-order">
                               <option class="item-dropdown" value="30days">Últimos 30 días</option>
@@ -111,9 +112,229 @@
                 </div>
                 <div class="resumen-kcal__content">
                     <div class="analytics"></div>
-                    <div class="legend"></div>
+                    <div class="legend">
+                        <!-- Lunch legend -->
+                        <div class="legend__item">
+                            <img src="./Assets/lunch.svg" alt="Icono de almuerzo" class="icon">
+                            <div class="content">
+                                <div class="content__title">                                    
+                                    <span><div class="legend1"></div>Calorías consumidas en <b>almuerzos</b></span>
+                                    <p>40%</p>
+                                </div>
+                                <div class="content__result">
+                                    <div class="item-result">
+                                        <p>Consumo promedio</p>
+                                        <p>00000 kcal</p>
+                                    </div>
+                                    <div class="item-result">
+                                        <p>Combo Big Mac</p>
+                                        <p>1080 kcal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dinner Legend -->
+                        <div class="legend__item">
+                            <img src="./Assets/dinner.svg" alt="Icono de cena" class="icon">
+                            <div class="content">
+                                <div class="content__title">                                    
+                                    <span><div class="legend2"></div>Calorías consumidas en <b>cenas</b></span>
+                                    <p>40%</p>
+                                </div>
+                                <div class="content__result">
+                                    <div class="item-result">
+                                        <p>Consumo promedio</p>
+                                        <p>00000 kcal</p>
+                                    </div>
+                                    <div class="item-result">
+                                        <p>Combo Big Mac</p>
+                                        <p>1080 kcal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Snack Legend -->
+                        <div class="legend__item">
+                            <img src="./Assets/snack.svg" alt="Icono de snacks" class="icon">
+                            <div class="content">
+                                <div class="content__title">                                    
+                                    <span><div class="legend3"></div>Calorías consumidas en <b>snacks</b></span>
+                                    <p>10%</p>
+                                </div>
+                                <div class="content__result">
+                                    <div class="item-result">
+                                        <p>Consumo promedio</p>
+                                        <p>00000 kcal</p>
+                                    </div>
+                                    <div class="item-result">
+                                        <p>Papitas fritas</p>
+                                        <p>320 kcal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Drink Legend -->
+                        <div class="legend__item">
+                            <img src="./Assets/drink.svg" alt="Icono de batidos" class="icon">
+                            <div class="content">
+                                <div class="content__title">                                    
+                                    <span><div class="legend4"></div>Calorías consumidas en <b>batidos</b></span>
+                                    <p>10%</p>
+                                </div>
+                                <div class="content__result">
+                                    <div class="item-result">
+                                        <p>Consumo promedio</p>
+                                        <p>00000 kcal</p>
+                                    </div>
+                                    <div class="item-result">
+                                        <p>Gaseosa mediana</p>
+                                        <p>210 kcal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="resumen-kcal__footer">
+                    <p>*Información obtenida a partir de su consumo de pedidos en TodosComemos.com esto no constituye en un consejo o asesoría nutricional, solo con fin informacional.</p>
+                </div>
+            </div>
+            <!-- Analytics protein -->
+            <div class="resumen-protein">
+                <div class="resumen-protein__header">
+                    <h1>Tu consumo de proteínas</h1>
+                    <a href="#"><box-icon class="icon" name='dots-vertical-rounded'></box-icon></a>
+                        <form action="#">
+                            <select class="dropdown" name="days-order" id="days-order">
+                              <option class="item-dropdown" value="30days">Últimos 30 días</option>
+                              <option class="item-dropdown" value="60days">Últimos 60 días</option>
+                              <option class="item-dropdown" value="90days">Últimos 90 días</option>
+                            </select>
+                        </form>
+                </div>
+                <div class="resumen-protein__content">
+                    <ol class="protein-list">
+                        <!-- Pollo -->
+                        <li class="protein-list__item">
+                            <div class="protein-info">
+                                <div class="protein-info__name">
+                                    <p>Pollo</p>
+                                    <p>7 veces</p>
+                                </div>
+                                <p class="protein-info__value">
+                                    (25%) 
+                                </p>
+                            </div>
+                            <div class="protein-bar">
+                                <div class="protein-bar__progress-item1"></div>
+                            </div>
+                        </li>
+                        <!-- Res -->
+                        <li class="protein-list__item">
+                            <div class="protein-info">
+                                <div class="protein-info__name">
+                                    <p>Res</p>
+                                    <p>3 veces</p>
+                                </div>
+                                <p class="protein-info__value">
+                                    (15%) 
+                                </p>
+                            </div>
+                            <div class="protein-bar">
+                                <div class="protein-bar__progress-item2"></div>
+                            </div>
+                        </li>
+                        <!-- Cerdo -->
+                        <li class="protein-list__item">
+                            <div class="protein-info">
+                                <div class="protein-info__name">
+                                    <p>Cerdo</p>
+                                    <p>1 vez</p>
+                                </div>
+                                <p class="protein-info__value">
+                                    (5%) 
+                                </p>
+                            </div>
+                            <div class="protein-bar">
+                                <div class="protein-bar__progress-item3"></div>
+                            </div>
+                        </li>
+                        <!-- Pescado -->
+                        <li class="protein-list__item">
+                            <div class="protein-info">
+                                <div class="protein-info__name">
+                                    <p>Pescado</p>
+                                    <p>12 vez</p>
+                                </div>
+                                <p class="protein-info__value">
+                                    (60%) 
+                                </p>
+                            </div>
+                            <div class="protein-bar">
+                                <div class="protein-bar__progress-item4"></div>
+                            </div>
+                        </li>
+                        <!-- Veganas -->
+                        <li class="protein-list__item">
+                            <div class="protein-info">
+                                <div class="protein-info__name">
+                                    <p>Vegana</p>
+                                    <p>0 veces</p>
+                                </div>
+                                <p class="protein-info__value">
+                                    (0%) 
+                                </p>
+                            </div>
+                            <div class="protein-bar">
+                                <div class="protein-bar__progress-item5"></div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="resumen-protein__footer">
+                    <p>*Información obtenida a partir de su consumo de pedidos en TodosComemos.com esto no constituye en un consejo o asesoría nutricional, solo con fin informacional.</p>
+                </div>
+            </div>
+            <!-- Historical -->
+            <div class="historical">
+                <div class="historical__header">
+                    <h1>Tu historial de consumo de calorías</h1>
+                    <a href="#"><box-icon class="icon" name='dots-vertical-rounded'></box-icon></a>
+                        <form action="#">
+                            <select class="dropdown" name="days-order" id="days-order">
+                              <option class="item-dropdown" value="30days">Últimos 30 días</option>
+                              <option class="item-dropdown" value="60days">Últimos 60 días</option>
+                              <option class="item-dropdown" value="90days">Últimos 90 días</option>
+                            </select>
+                        </form>
+                </div>
+                <div class="historical__content">
+                    <div class="info">
+                        <div class="info__item">
+                            <p>Promedio por almuerzo</p>
+                            <div class="value">
+                                <p>420</p>
+                                <p>kcal.</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p>Promedio por cena</p>
+                            <div class="value">
+                                <p>375</p>
+                                <p>kcal.</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p>Combo Big Mac</p>
+                            <div class="value">
+                                <p>1080</p>
+                                <p>kcal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graphic"></div>
+                </div>
+                <div class="historical__footer">
                     <p>*Información obtenida a partir de su consumo de pedidos en TodosComemos.com esto no constituye en un consejo o asesoría nutricional, solo con fin informacional.</p>
                 </div>
             </div>

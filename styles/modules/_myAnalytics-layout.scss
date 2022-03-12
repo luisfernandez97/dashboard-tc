@@ -124,6 +124,7 @@
         justify-content: space-between;
         gap: 24px;
         padding: 32px;
+        width: 100%;
         @media (max-width: $width-m){
             padding: 16px;
         }
@@ -172,7 +173,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 24px;
     font-family: $regular-font;
     &__header{
         padding: 24px;
@@ -183,15 +184,259 @@
         h1{
             font-family: $bold-font;
             font-size: $headline4;
+            margin: 0;
+            width: 100%;
+        }
+        .icon{
+            display: none;
         }
         .dropdown{
             @include dropdown-main;
+            width: 200px;
+        }
+        @media (max-width: $width-m){
+            .icon{
+                display: block;
+            }
+            .dropdown{
+                display: none;
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 48px;
+        align-items: center;
+        .analytics{
+            width: 232px;
+            height: 232px;
+            padding: 40px;
+            border-radius: 50%;
+            background-color: $primary-color-yellow;
+        }        
+        .legend{
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            background-color: $neutral-color-white;
+            border-radius: 16px;
+            width: 490px;
+            gap: 16px;
+            &__item{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                width: 100%;
+                padding-bottom: 16px;
+                border-bottom: 1px solid $secondary-color-gray-500;
+                .content{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        margin: 0;
+                    }
+                    &__title{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding-bottom: 4px;
+                        & p:last-child{
+                            font-family: $bold-font;
+                        }
+                        span{
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                            font-size: $text2;
+                            flex-wrap: wrap;
+                            b{
+                                font-family: $bold-font;
+                            }                            
+                            //Colores para la leyenda
+                            .legend1{
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background-color: $primary-color-yellow;
+                            }
+                            .legend2{
+                                @extend .legend1;
+                                background-color: #1F9C94;
+                            }
+                            .legend3{
+                                @extend .legend1;
+                                background-color: #17AF47;
+                            }
+                            .legend4{
+                                @extend .legend1;
+                                background-color: #8036E0;
+                            }
+                        }
+                        @media (max-width: $width-m){
+                            span{
+                                font-size: $text4;
+                                gap: 4px;
+                            }
+                        }
+                    }
+                    
+                    &__result{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+                        font-size: $text3;
+                        .item-result{
+                            width: 100%;
+                            gap: 4px;
+                        }
+                    }
+                    @media (max-width: $width-m){
+                       .content__result{
+                           font-size: $text4;
+                       } 
+                    }
+                }
+            }
         }
     }
     &__footer{
         padding: 24px; 
         font-size: $caption;
         color: $secondary-color-gray-900;
+    }
+}
+
+.resumen-protein{
+    @extend .resumen-kcal;
+    &__header{
+        @extend .resumen-kcal__header;
+    }
+    &__content{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        .protein-list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+            &__item{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                .protein-info{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &__name{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 8px;
+                        margin: 0;
+                        font-size: $text3;
+                        font-family: $regular-font;
+                        p{
+                            margin: 0;
+                        }
+                        & p:first-child{
+                            font-family: $bold-font;
+                            margin: 0;
+                        }
+                    }
+                    &__value{
+                        font-family: $bold-font;
+                        margin: 0;
+                    }
+                }
+                .protein-bar{
+                    height: 8px;
+                    width: 100%;
+                    border-radius: 60px;
+                    background-color: $secondary-color-gray-500;
+                    //Progress bars
+                    &__progress-item1{
+                        width: 25%;
+                        height: 8px;
+                        border-radius: 60px;
+                        background-color: $primary-color-yellow;
+                    }
+                    &__progress-item2{
+                        @extend .protein-bar__progress-item1;
+                        width: 15%;
+                    }
+                    &__progress-item4{
+                        @extend .protein-bar__progress-item1;
+                        width: 5%;
+                    }
+                    &__progress-item4{
+                        @extend .protein-bar__progress-item1;
+                        width: 60%;
+                    }
+                    &__progress-item5{
+                        @extend .protein-bar__progress-item1;
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__footer{
+        @extend .resumen-kcal__footer;
+    }
+}
+
+.historical{
+    @extend .resumen-kcal;
+    &__header{
+        @extend .resumen-kcal__header;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 24px;
+        .info {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            flex-wrap: wrap;
+            &__item{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                p {
+                font-family: $regular-font;
+                font-size: $text4;
+                margin: 0;
+                }
+                .value, p{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: end;
+                    gap: 8px;
+                    font-size: $text4;
+                    margin: 0;
+                }
+                .value p:first-child{
+                    font-size: $headline5;
+                    font-family: $bold-font;
+                }
+            }
+        }  
+        .graphic{
+            height: 226px;
+            width: 100%;
+            background-color: $secondary-color-gray-500;
+        }       
+    }
+    &__footer{
+        @extend .resumen-kcal__footer;
     }
 }
 
@@ -208,12 +453,28 @@
         flex-direction: column;
         &__content{
             order: 1;
+            width: auto;
         }
         &__image > img{
             order: 0;
             width: 100%;
             height: 290px;
             border-radius: 16px 16px 0 0;
+        }
+    }
+    .resumen-kcal{
+        gap: 16px;
+        &__content{
+            flex-direction: column;
+            padding: 16px;
+            gap: 36px;
+            .legend{
+                width: 100%;
+                box-sizing: border-box;
+                &__item > img{
+                    display: none;
+                }
+            }
         }
     }
     

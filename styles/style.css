@@ -1702,6 +1702,7 @@ a {
           justify-content: space-between;
   gap: 24px;
   padding: 32px;
+  width: 100%;
 }
 @media (max-width: 992px) {
   .social-resumen__content {
@@ -1757,7 +1758,7 @@ a {
   border-radius: 0 16px 16px 0;
 }
 
-.resumen-kcal {
+.resumen-kcal, .historical, .resumen-protein {
   padding: 16px;
   gap: 16px;
   border-radius: 16px;
@@ -1775,10 +1776,10 @@ a {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 24px;
   font-family: "Goldplay-Regular";
 }
-.resumen-kcal__header {
+.resumen-kcal__header, .historical__header, .resumen-protein__header {
   padding: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,11 +1795,16 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.resumen-kcal__header h1 {
+.resumen-kcal__header h1, .historical__header h1, .resumen-protein__header h1 {
   font-family: "Goldplay-Bold";
   font-size: 28px;
+  margin: 0;
+  width: 100%;
 }
-.resumen-kcal__header .dropdown {
+.resumen-kcal__header .icon, .historical__header .icon, .resumen-protein__header .icon {
+  display: none;
+}
+.resumen-kcal__header .dropdown, .historical__header .dropdown, .resumen-protein__header .dropdown {
   width: 100%;
   height: 45px;
   display: -webkit-box;
@@ -1814,13 +1820,313 @@ a {
   background-color: #fff;
   font-family: "Goldplay-Regular";
   font-size: 16px;
+  width: 200px;
 }
-.resumen-kcal__footer {
+@media (max-width: 992px) {
+  .resumen-kcal__header .icon, .historical__header .icon, .resumen-protein__header .icon {
+    display: block;
+  }
+  .resumen-kcal__header .dropdown, .historical__header .dropdown, .resumen-protein__header .dropdown {
+    display: none;
+  }
+}
+.resumen-kcal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.resumen-kcal__content .analytics {
+  width: 232px;
+  height: 232px;
+  padding: 40px;
+  border-radius: 50%;
+  background-color: #FCC23F;
+}
+.resumen-kcal__content .legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  background-color: #fbfbfb;
+  border-radius: 16px;
+  width: 490px;
+  gap: 16px;
+}
+.resumen-kcal__content .legend__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EEEEEE;
+}
+.resumen-kcal__content .legend__item .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.resumen-kcal__content .legend__item .content p {
+  margin: 0;
+}
+.resumen-kcal__content .legend__item .content__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4px;
+}
+.resumen-kcal__content .legend__item .content__title p:last-child {
+  font-family: "Goldplay-Bold";
+}
+.resumen-kcal__content .legend__item .content__title span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.resumen-kcal__content .legend__item .content__title span b {
+  font-family: "Goldplay-Bold";
+}
+.resumen-kcal__content .legend__item .content__title span .legend1, .resumen-kcal__content .legend__item .content__title span .legend4, .resumen-kcal__content .legend__item .content__title span .legend3, .resumen-kcal__content .legend__item .content__title span .legend2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FCC23F;
+}
+.resumen-kcal__content .legend__item .content__title span .legend2 {
+  background-color: #1F9C94;
+}
+.resumen-kcal__content .legend__item .content__title span .legend3 {
+  background-color: #17AF47;
+}
+.resumen-kcal__content .legend__item .content__title span .legend4 {
+  background-color: #8036E0;
+}
+@media (max-width: 992px) {
+  .resumen-kcal__content .legend__item .content__title span {
+    font-size: 14px;
+    gap: 4px;
+  }
+}
+.resumen-kcal__content .legend__item .content__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+  font-size: 16px;
+}
+.resumen-kcal__content .legend__item .content__result .item-result {
+  width: 100%;
+  gap: 4px;
+}
+@media (max-width: 992px) {
+  .resumen-kcal__content .legend__item .content .content__result {
+    font-size: 14px;
+  }
+}
+.resumen-kcal__footer, .historical__footer, .resumen-protein__footer {
   padding: 24px;
   font-size: 12px;
   color: #6D6D6D;
 }
 
+.resumen-protein__content {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.resumen-protein__content .protein-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+.resumen-protein__content .protein-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.resumen-protein__content .protein-list__item .protein-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.resumen-protein__content .protein-list__item .protein-info__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Goldplay-Regular";
+}
+.resumen-protein__content .protein-list__item .protein-info__name p {
+  margin: 0;
+}
+.resumen-protein__content .protein-list__item .protein-info__name p:first-child {
+  font-family: "Goldplay-Bold";
+  margin: 0;
+}
+.resumen-protein__content .protein-list__item .protein-info__value {
+  font-family: "Goldplay-Bold";
+  margin: 0;
+}
+.resumen-protein__content .protein-list__item .protein-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 60px;
+  background-color: #EEEEEE;
+}
+.resumen-protein__content .protein-list__item .protein-bar__progress-item1, .resumen-protein__content .protein-list__item .protein-bar__progress-item5, .resumen-protein__content .protein-list__item .protein-bar__progress-item4, .resumen-protein__content .protein-list__item .protein-bar__progress-item2 {
+  width: 25%;
+  height: 8px;
+  border-radius: 60px;
+  background-color: #FCC23F;
+}
+.resumen-protein__content .protein-list__item .protein-bar__progress-item2 {
+  width: 15%;
+}
+.resumen-protein__content .protein-list__item .protein-bar__progress-item4 {
+  width: 5%;
+}
+.resumen-protein__content .protein-list__item .protein-bar__progress-item4 {
+  width: 60%;
+}
+.resumen-protein__content .protein-list__item .protein-bar__progress-item5 {
+  width: 0;
+}
+.historical__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  padding: 0 24px;
+}
+.historical__content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.historical__content .info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.historical__content .info__item p {
+  font-family: "Goldplay-Regular";
+  font-size: 14px;
+  margin: 0;
+}
+.historical__content .info__item .value, .historical__content .info__item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 8px;
+  font-size: 14px;
+  margin: 0;
+}
+.historical__content .info__item .value p:first-child {
+  font-size: 22px;
+  font-family: "Goldplay-Bold";
+}
+.historical__content .graphic {
+  height: 226px;
+  width: 100%;
+  background-color: #EEEEEE;
+}
 @media (max-width: 992px) {
   .resumen-container {
     -webkit-box-orient: vertical;
@@ -1843,6 +2149,7 @@ a {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    width: auto;
   }
   .social-resumen__image > img {
     -webkit-box-ordinal-group: 1;
@@ -1851,5 +2158,25 @@ a {
     width: 100%;
     height: 290px;
     border-radius: 16px 16px 0 0;
+  }
+
+  .resumen-kcal, .resumen-protein, .historical {
+    gap: 16px;
+  }
+  .resumen-kcal__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px;
+    gap: 36px;
+  }
+  .resumen-kcal__content .legend {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .resumen-kcal__content .legend__item > img {
+    display: none;
   }
 }
